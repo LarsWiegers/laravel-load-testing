@@ -3,8 +3,6 @@
 namespace Larswiegers\LoadTesting\Console;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Str;
-use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\Process\Process;
 
 class RunK6Binary extends Command
@@ -21,6 +19,6 @@ class RunK6Binary extends Command
 
         $process->wait();
 
-        $this->line(Str::replace('\\n', '', $process->getOutput()));
+        $this->line(str_replace('\\n', '', $process->getOutput()));
     }
 }
