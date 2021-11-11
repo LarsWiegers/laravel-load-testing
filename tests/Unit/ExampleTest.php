@@ -17,8 +17,9 @@ final class ExampleTest extends TestCase
     {
         $output = new BufferedOutput;
 
-        Artisan::call('loadtest:run', [], $output);
+        Artisan::call('loadtest:run', ['url' => 'larswiegers.nl'], $output);
         $lines = explode("\n", $output->fetch());
-        dd($lines);
+
+        $this->assertTrue(true);
     }
 }

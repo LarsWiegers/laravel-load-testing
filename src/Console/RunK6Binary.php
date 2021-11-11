@@ -9,7 +9,7 @@ use Symfony\Component\Process\Process;
 
 class RunK6Binary extends Command
 {
-    protected $signature = 'loadtest:run';
+    protected $signature = 'loadtest:run {url=127.0.0.1}';
 
     protected $description = 'Run the specified script';
 

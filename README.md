@@ -1,10 +1,13 @@
-# Very short description of the package
+# WIP Laravel load testing package
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/larswiegers/laravel-load-testing.svg?style=flat-square)](https://packagist.org/packages/larswiegers/laravel-load-testing)
 [![Total Downloads](https://img.shields.io/packagist/dt/larswiegers/laravel-load-testing.svg?style=flat-square)](https://packagist.org/packages/larswiegers/laravel-load-testing)
 ![GitHub Actions](https://github.com/larswiegers/laravel-load-testing/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+![Laravel maps](https://banners.beyondco.de/Laravel%20Load%20Testing.png?theme=light&packageManager=composer+require&packageName=larswiegers%2Flaravel-load-testing&pattern=architect&style=style_1&description=The+easiest+way+to+use+load+test+your+application+or+api.+&md=1&showWatermark=0&fontSize=100px&images=terminal&widths=500&heights=500)
+
+WIP package, that can help you write load testing scripts for your application or api. 
+Write your tests like your used to in the Laravel way. 
 
 ## Installation
 
@@ -50,7 +53,3 @@ If you discover any security related issues, please email larswiegers@live.nl in
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

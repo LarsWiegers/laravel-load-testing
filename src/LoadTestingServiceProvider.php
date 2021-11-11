@@ -64,5 +64,7 @@ class LoadTestingServiceProvider extends ServiceProvider
         $this->app->singleton('laravel-load-testing', function () {
             return new LoadTest;
         });
+
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
     }
 }
