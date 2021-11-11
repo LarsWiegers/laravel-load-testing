@@ -1,10 +1,11 @@
 <?php
 
-namespace Larswiegers\LaravelLoadTesting;
+namespace Larswiegers\LoadTesting;
 
 use Illuminate\Support\ServiceProvider;
+use Larswiegers\LoadTesting\Console\RunK6Binary;
 
-class LaravelLoadTestingServiceProvider extends ServiceProvider
+class LoadTestingServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -41,6 +42,13 @@ class LaravelLoadTestingServiceProvider extends ServiceProvider
 
             // Registering package commands.
             // $this->commands([]);
+
+            // Register the command if we are using the application via the CLI
+            if ($this->app->runningInConsole()) {
+                $this->commands([
+                    RunK6Binary::class,
+                ]);
+            }
         }
     }
 
@@ -54,7 +62,7 @@ class LaravelLoadTestingServiceProvider extends ServiceProvider
 
         // Register the main class to use with the facade
         $this->app->singleton('laravel-load-testing', function () {
-            return new LaravelLoadTesting;
+            return new LoadTest;
         });
     }
 }

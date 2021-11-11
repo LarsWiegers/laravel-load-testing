@@ -18,12 +18,16 @@ composer require larswiegers/laravel-load-testing
 
 ```php
 // Usage description here
+$statistics = LoadTesting::get(route('api.route'))->times(10)->perSecond()->for(10)->seconds()->execute();
+
+$statistics->assertMaxDuration('500ms')
+$statistics->assertRequestsDidNotFail()
 ```
 
 ### Testing
 
 ```bash
-composer test
+composer run test
 ```
 
 ### Changelog

@@ -25,16 +25,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Larswiegers\\LaravelLoadTesting\\": "src"
+            "Larswiegers\\LoadTesting\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Larswiegers\\LaravelLoadTesting\\Tests\\": "tests"
-        }
+            "Larswiegers\\LoadTesting\\Tests\\": "tests"
+        },
+        "classmap": [
+            "tests"
+        ]
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/phpunit tests",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
 
     },
@@ -44,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Larswiegers\\LaravelLoadTesting\\LaravelLoadTestingServiceProvider"
+                "LoadTestingServiceProvider"
             ],
             "aliases": {
-                "LaravelLoadTesting": "Larswiegers\\LaravelLoadTesting\\LaravelLoadTestingFacade"
+                "LoadTesting": "LoadTestFacade"
             }
         }
     }

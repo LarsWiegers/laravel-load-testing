@@ -1,13 +1,13 @@
 <?php
 
-namespace Larswiegers\LaravelLoadTesting;
+namespace Larswiegers\LoadTesting;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Larswiegers\LaravelLoadTesting\Skeleton\SkeletonClass
+ * @see \Larswiegers\LoadTesting\Skeleton\SkeletonClass
  */
-class LaravelLoadTestingFacade extends Facade
+class LoadTestFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LaravelLoadTestingFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-load-testing';
+        return 'load-test';
     }
 }
